@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 1</title>
+    <script>
+        function redirectToPage2() {
+            var name = document.getElementById("nameInput").value;
+            if (name) {
+                var encodedName = encodeURIComponent(name);
+                var url = "page2.html?name=" + encodedName;
+                window.location.href = url;
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter your name</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="redirectToPage2()">Submit</button>
+</body>
+</html>
